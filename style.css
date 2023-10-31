@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --Tomato: hsl(4, 100%, 67%);
+    --Dark-Slate-Grey: #242742;
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+}
+
+.container{
+    min-height: 100vh;
+    background-color: var(--Dark-Slate-Grey);
+    display: grid;
+    place-items: center;
+}
+
+.form-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10%;
+    background-color: white;
+    padding:2rem 1.5rem;
+    border-radius: 10px;
+    width: 700px;
+    height: 400px;
+    overflow: hidden;
+
+}
+.content h1{
+    padding-bottom: 8px;
+}
+.content small{
+    font-size: 12px;
+    color: var(--Grey);
+}
+
+.content{
+    flex-basis: 55%;
+}
+
+.img{
+    flex-basis: 45%;
+}
+.img img{
+    width: 90%;
+    height: 80%;
+    object-fit: contain;
+}
+
+.list{
+    margin-block: 10px;
+}
+
+.list p{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    padding-block: 5px;
+}
+
+.emaildiv label{
+    color: var(--Dark-Slate-Grey);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.emaildiv input{
+    padding: 10px;
+    color: var(--Grey);
+    border: none;
+    outline: none;
+    width: 90%;
+    border-radius: 10px;
+    border: .5px solid var(--Grey);
+    margin-top: 10px;
+}
+
+.emaildiv button,.btn{
+    background-color: var(--Dark-Slate-Grey);
+    color: var(--White);
+    text-align: center;
+    width: 90%;
+    border: none;
+    outline: none;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 12px;
+    transition: .2s linear;
+}
+
+input:focus{
+    outline: 2px solid var(--Dark-Slate-Grey);
+}
+
+.emaildiv button:hover,.btn{
+    background-color: var(--Tomato);
+    cursor: pointer;
+    box-shadow: var(--Tomato) 0px 3px 10px 0px;
+}
+
+.success-model{
+    color: rgb(0, 0, 0);
+    max-width: 300px;
+    width: 90%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    position: fixed;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: .3s linear;
+
+}
+
+.success-model img{
+    width: 40px;
+    height: 40px;
+    padding-bottom: 10px;
+}
+
+.success-model h1{
+    color: var(--Dark-Slate-Grey);
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+
+.success-model p{
+    color: var(--Grey);
+}
+
+#error{
+    color: red;
+    visibility: hidden;
+}
+
+/* responsiveness  */
+
+@media(max-width:720px){
+    .form-container{
+        width: 90%;
+    }
+}
+
+@media(max-width:600px){
+    .container{
+        display: block;
+        overflow: hidden;
+        height: auto;
+    }
+    .form-container{
+        flex-direction: column-reverse;
+        height: 100%;
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    
+}
